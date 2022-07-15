@@ -18,3 +18,7 @@ input[type=submit] {
     background-color: rgb(226 232 240);
     width: 30% !important;
 }
+
+.tabletextalign{
+    text-align: right;
+}
