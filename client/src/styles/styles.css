@@ -22,7 +22,6 @@ input[type=submit] {
 .hideRoomSel {
     background-color: rgb(148 104 70);
     color: white;
-    vertical-align: baseline;
     width: 1.2vw;
     height: 1.2vw;
     border-radius: 50%;
