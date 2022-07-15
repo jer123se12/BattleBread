@@ -2,13 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="UTF-6">
-        <script src="index.js"></script>
         <link href="./src/styles/styles.css" rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-        <script type="module" src="index.js"></script>
-        <link href="./src/styles/styles.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         <!-- Tailwind CSS Config -->
         <script src="https://cdn.tailwindcss.com"></script>
@@ -16,13 +13,38 @@
             tailwind.config = {
                 theme: {
                     colors: {
-                        "primaryBrown": '#966666',
+                        "primaryBrown": '966666',
                         "spaceGray": '2D3162',
                     }, extend: {
                         width: {
                             '1/100': '1%'
                         }
                     }
+                }
+            }
+
+            const hideShowEditRoom = () => {
+                const box = document.getElementById("inputRoomIDBox")
+                const btn = document.getElementById("hideRoomSel")
+
+                if (box.classList.contains('hidden')) {
+                    box.classList.remove('hidden');
+                    setTimeout(function () {
+                        box.classList.remove('visuallyHidden');
+                    }, 20);
+                    btn.classList.remove("fa-arrow-down");
+                    btn.classList.add("fa-arrow-up");
+                } else {
+                    btn.classList.remove("fa-arrow-up");
+                    btn.classList.add("fa-arrow-down");
+                    box.classList.add('visuallyHidden');    
+                    box.addEventListener('transitionend', function(e) {
+                        box.classList.add('hidden');
+                    }, {
+                        capture: false,
+                        once: true,
+                        passive: false
+                    });
                 }
             }
         </script>
@@ -34,22 +56,29 @@
         </script>
 
         <title>BattleBread</title>
+        <script type="module" type="text/javascript" src="./index.js"></script>
+        <link href="./src/styles/styles.css" rel="stylesheet" type="text/css" />
     </head>
 
     <body>
         <div class="p-10" id="maincontainer">
-            <h1 class="font-bold text-4xl pb-10">BattleBread</h1>
+            <h1 class="font-bold text-4xl pb-6">BattleBread</h1>
 
             <div>
                 <div class="container roomSelBox rounded-lg shadow-lg">
                     <div class="p-2 pl-5 pr-3">
-                        <h2 class="font-bold text-2xl">Room ID</h2>
+                        <div class="flex flex-row justify-between">
+                            <h2 class="font-bold text-2xl">Room ID</h2>
+                            <button class="hideRoomSel fa-solid fa-arrow-up" onclick="hideShowEditRoom()" id="hideRoomSel"></button>
+                        </div>
                         <h4 id="roomID"></h4>
-                        <h3 class="font-bold">Or join an existing room</h3>
-                        <form>
-                            <input type="text" id="id-input">
-                            <input type="submit" value="Join" id="join-btn">
-                        </form>
+                        <div id="inputRoomIDBox" class="inputRoomIDBox">
+                            <h3 class="font-bold">Or join an existing room</h3>
+                            <form>
+                                <input type="text" id="id-input">
+                                <input type="submit" value="Join" id="join-btn">
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div class="pt-8" style="width: 30%">
