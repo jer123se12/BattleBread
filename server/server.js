@@ -12,6 +12,14 @@ io.on('connection', (socket) => {
         }
     })
 
+    socket.on("join-room", (room) => {
+        socket.join(room)
+    })
+
+    socket.on("temp-text", (txt, roomID) => {
+        socket.to(roomID).emit("send-txt", txt)
+    })
+
     socket.on('disconnect', () => {
         console.log('User Disconnected')
     })
