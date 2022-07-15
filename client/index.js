@@ -13,6 +13,7 @@ const joinRoomBtn = document.getElementById("join-btn")
 const roomIDInput = document.getElementById("id-input")
 let roomID = ""
 
+document.getElementById("roomID").innerHTML = "Error: Server not found"
 joinRoomBtn.addEventListener("click", (e) => {
     e.preventDefault()
     roomID = roomIDInput.value

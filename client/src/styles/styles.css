@@ -1,5 +1,5 @@
 input[type=text] {
-    width: 25%;
+    width: 50%;
     padding: 5px 20px;
     margin: 8px 0;
     box-sizing: border-box;
@@ -16,4 +16,5 @@ input[type=submit] {
 
 .roomSelBox {
     background-color: rgb(226 232 240);
+    width: 30% !important;
 }
