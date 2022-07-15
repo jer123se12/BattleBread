@@ -18,3 +18,31 @@ input[type=submit] {
     background-color: rgb(226 232 240);
     width: 30% !important;
 }
+
+.hideRoomSel {
+    background-color: rgb(148 104 70);
+    color: white;
+    vertical-align: baseline;
+    width: 1.2vw;
+    height: 1.2vw;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+.hideRoomSel:hover {
+    background-color: rgb(126 89 60);
+}
+
+.inputRoomIDBox {
+    transition: all 0.3s linear;
+}
+
+.visuallyHidden {
+    opacity: 0;
+}
+
+.hidden {
+    display: none;
+}
