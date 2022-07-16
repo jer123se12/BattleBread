@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
         <!-- Tailwind CSS Config -->
         <script src="https://cdn.tailwindcss.com"></script>
@@ -46,6 +47,10 @@
                         passive: false
                     });
                 }
+            }
+
+            const cellClicked = (id) => {
+                console.log(`Cell with ID: ${id} clicked.`)
             }
         </script>
 
@@ -90,7 +95,7 @@
                     <h3 id="yey"></h3>
                 </div>
             </div>
-            <table class="table-fixed border-separate">
+            <table class="table-fixed border-separate" id="u1grid">
                 <tr>
                     <td class="w-12 h-14 pr-2 text-right"></td>
                     <td class="w-14 h-14 text-center">1</td>
@@ -106,133 +111,133 @@
                 </tr>
                 <tr>
                     <td class="w-12 h-14 pr-2 text-right">A</td>
-                    <td class="border w-14 h-14 text-center" id="u1a1"></td>
-                    <td class="border w-14 h-14 text-center" id="u1a2"></td>
-                    <td class="border w-14 h-14 text-center" id="u1a3"></td>
-                    <td class="border w-14 h-14 text-center" id="u1a4"></td>
-                    <td class="border w-14 h-14 text-center" id="u1a5"></td>
-                    <td class="border w-14 h-14 text-center" id="u1a6"></td>
-                    <td class="border w-14 h-14 text-center" id="u1a7"></td>
-                    <td class="border w-14 h-14 text-center" id="u1a8"></td>
-                    <td class="border w-14 h-14 text-center" id="u1a9"></td>
-                    <td class="border w-14 h-14 text-center" id="u1a10"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1a1"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1a2"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1a3"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1a4"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1a5"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1a6"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1a7"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1a8"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1a9"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1a10"></td>
                 </tr>
                 <tr>
                     <td class="w-12 h-14 pr-2 text-right">B</td>
-                    <td class="border w-14 h-14 text-center" id="u1b1"></td>
-                    <td class="border w-14 h-14 text-center" id="u1b2"></td>
-                    <td class="border w-14 h-14 text-center" id="u1b3"></td>
-                    <td class="border w-14 h-14 text-center" id="u1b4"></td>
-                    <td class="border w-14 h-14 text-center" id="u1b5"></td>
-                    <td class="border w-14 h-14 text-center" id="u1b6"></td>
-                    <td class="border w-14 h-14 text-center" id="u1b7"></td>
-                    <td class="border w-14 h-14 text-center" id="u1b8"></td>
-                    <td class="border w-14 h-14 text-center" id="u1b9"></td>
-                    <td class="border w-14 h-14 text-center" id="u1b10"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1b1"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1b2"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1b3"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1b4"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1b5"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1b6"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1b7"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1b8"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1b9"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1b10"></td>
                 </tr>
                 <tr>
                     <td class="w-12 h-14 pr-2 text-right">C</td>
-                    <td class="border w-14 h-14 text-center" id="u1c1"></td>
-                    <td class="border w-14 h-14 text-center" id="u1c2"></td>
-                    <td class="border w-14 h-14 text-center" id="u1c3"></td>
-                    <td class="border w-14 h-14 text-center" id="u1c4"></td>
-                    <td class="border w-14 h-14 text-center" id="u1c5"></td>
-                    <td class="border w-14 h-14 text-center" id="u1c6"></td>
-                    <td class="border w-14 h-14 text-center" id="u1c7"></td>
-                    <td class="border w-14 h-14 text-center" id="u1c8"></td>
-                    <td class="border w-14 h-14 text-center" id="u1c9"></td>
-                    <td class="border w-14 h-14 text-center" id="u1c10"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1c1"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1c2"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1c3"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1c4"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1c5"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1c6"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1c7"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1c8"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1c9"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1c10"></td>
                 </tr>
                 <tr>
                     <td class="w-12 h-14 pr-2 text-right">D</td>
-                    <td class="border w-14 h-14 text-center" id="u1d1"></td>
-                    <td class="border w-14 h-14 text-center" id="u1d2"></td>
-                    <td class="border w-14 h-14 text-center" id="u1d3"></td>
-                    <td class="border w-14 h-14 text-center" id="u1d4"></td>
-                    <td class="border w-14 h-14 text-center" id="u1d5"></td>
-                    <td class="border w-14 h-14 text-center" id="u1d6"></td>
-                    <td class="border w-14 h-14 text-center" id="u1d7"></td>
-                    <td class="border w-14 h-14 text-center" id="u1d8"></td>
-                    <td class="border w-14 h-14 text-center" id="u1d9"></td>
-                    <td class="border w-14 h-14 text-center" id="u1d10"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1d1"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1d2"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1d3"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1d4"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1d5"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1d6"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1d7"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1d8"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1d9"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1d10"></td>
                 </tr>
                 <tr>
                     <td class="w-12 h-14 pr-2 text-right">E</td> 
-                    <td class="border w-14 h-14 text-center" id="u1e1"></td>
-                    <td class="border w-14 h-14 text-center" id="u1e2"></td>
-                    <td class="border w-14 h-14 text-center" id="u1e3"></td>
-                    <td class="border w-14 h-14 text-center" id="u1e4"></td>
-                    <td class="border w-14 h-14 text-center" id="u1e5"></td>
-                    <td class="border w-14 h-14 text-center" id="u1e6"></td>
-                    <td class="border w-14 h-14 text-center" id="u1e7"></td>
-                    <td class="border w-14 h-14 text-center" id="u1e8"></td>
-                    <td class="border w-14 h-14 text-center" id="u1e9"></td>
-                    <td class="border w-14 h-14 text-center" id="u1e10"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1e1"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1e2"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1e3"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1e4"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1e5"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1e6"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1e7"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1e8"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1e9"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1e10"></td>
                 </tr>
                 <tr>
                     <td class="w-12 h-14 pr-2 text-right">F</td>
-                    <td class="border w-14 h-14 text-center" id="u1f1"></td>
-                    <td class="border w-14 h-14 text-center" id="u1f2"></td>
-                    <td class="border w-14 h-14 text-center" id="u1f3"></td>
-                    <td class="border w-14 h-14 text-center" id="u1f4"></td>
-                    <td class="border w-14 h-14 text-center" id="u1f5"></td>
-                    <td class="border w-14 h-14 text-center" id="u1f6"></td>
-                    <td class="border w-14 h-14 text-center" id="u1f7"></td>
-                    <td class="border w-14 h-14 text-center" id="u1f8"></td>
-                    <td class="border w-14 h-14 text-center" id="u1f9"></td>
-                    <td class="border w-14 h-14 text-center" id="u1f10"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1f1"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1f2"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1f3"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1f4"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1f5"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1f6"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1f7"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1f8"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1f9"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1f10"></td>
                 </tr>
                 <tr>
                     <td class="w-12 h-14 pr-2 text-right">G</td>
-                    <td class="border w-14 h-14 text-center" id="u1g1"></td>
-                    <td class="border w-14 h-14 text-center" id="u1g2"></td>
-                    <td class="border w-14 h-14 text-center" id="u1g3"></td>
-                    <td class="border w-14 h-14 text-center" id="u1g4"></td>
-                    <td class="border w-14 h-14 text-center" id="u1g5"></td>
-                    <td class="border w-14 h-14 text-center" id="u1g6"></td>
-                    <td class="border w-14 h-14 text-center" id="u1g7"></td>
-                    <td class="border w-14 h-14 text-center" id="u1g8"></td>
-                    <td class="border w-14 h-14 text-center" id="u1g9"></td>
-                    <td class="border w-14 h-14 text-center" id="u1g10"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1g1"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1g2"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1g3"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1g4"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1g5"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1g6"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1g7"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1g8"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1g9"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1g10"></td>
                 </tr>
                 <tr>
                     <td class="w-12 h-14 pr-2 text-right">H</td>
-                    <td class="border w-14 h-14 text-center" id="u1h1"></td>
-                    <td class="border w-14 h-14 text-center" id="u1h2"></td>
-                    <td class="border w-14 h-14 text-center" id="u1h3"></td>
-                    <td class="border w-14 h-14 text-center" id="u1h4"></td>
-                    <td class="border w-14 h-14 text-center" id="u1h5"></td>
-                    <td class="border w-14 h-14 text-center" id="u1h6"></td>
-                    <td class="border w-14 h-14 text-center" id="u1h7"></td>
-                    <td class="border w-14 h-14 text-center" id="u1h8"></td>
-                    <td class="border w-14 h-14 text-center" id="u1h9"></td>
-                    <td class="border w-14 h-14 text-center" id="u1h10"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1h1"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1h2"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1h3"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1h4"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1h5"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1h6"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1h7"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1h8"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1h9"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1h10"></td>
                 </tr>
                 <tr>
                     <td class="w-12 h-14 pr-2 text-right">I</td>
-                    <td class="border w-14 h-14 text-center" id="u1i"></td>
-                    <td class="border w-14 h-14 text-center" id="u1i"></td>
-                    <td class="border w-14 h-14 text-center" id="u1i"></td>
-                    <td class="border w-14 h-14 text-center" id="u1i"></td>
-                    <td class="border w-14 h-14 text-center" id="u1i"></td>
-                    <td class="border w-14 h-14 text-center" id="u1i"></td>
-                    <td class="border w-14 h-14 text-center" id="u1i"></td>
-                    <td class="border w-14 h-14 text-center" id="u1i"></td>
-                    <td class="border w-14 h-14 text-center" id="u1i"></td>
-                    <td class="border w-14 h-14 text-center" id="u1i"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1i"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1i"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1i"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1i"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1i"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1i"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1i"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1i"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1i"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1i"></td>
                 </tr>
                 <tr>
                     <td class="w-12 h-14 pr-2 text-right">J</td>
-                    <td class="border w-14 h-14 text-center" id="u1j"></td>
-                    <td class="border w-14 h-14 text-center" id="u1j"></td>
-                    <td class="border w-14 h-14 text-center" id="u1j"></td>
-                    <td class="border w-14 h-14 text-center" id="u1j"></td>
-                    <td class="border w-14 h-14 text-center" id="u1j"></td>
-                    <td class="border w-14 h-14 text-center" id="u1j"></td>
-                    <td class="border w-14 h-14 text-center" id="u1j"></td>
-                    <td class="border w-14 h-14 text-center" id="u1j"></td>
-                    <td class="border w-14 h-14 text-center" id="u1j"></td>
-                    <td class="border w-14 h-14 text-center" id="u1j"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1j"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1j"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1j"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1j"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1j"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1j"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1j"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1j"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1j"></td>
+                    <td class="border w-14 h-14 text-center cell" id="u1j"></td>
                 </tr>
             </table>
         </div>

@@ -7,9 +7,7 @@ io.on('connection', (socket) => {
     console.log(`User Connected with ${socket.id}`)
 
     socket.on("send-tile", (tile, room) => {
-        if (room !== "") {
-            socket.to(room).emit("recieve-tile", tile)
-        }
+        socket.to(room).emit("recieve-tile", tile)
     })
 
     socket.on("join-room", (room) => {
