@@ -24,6 +24,7 @@ joinRoomBtn.addEventListener("click", (e) => {
 // Manage Cells
 const cellClicked = (id) => {
     console.log(`Cell with ID: ${id} clicked.`)
+    document.getElementById(id).innerHTML = "X"
     socket.emit("send-tile", id, roomID)
 }
 
@@ -34,6 +35,12 @@ for (let i = 0; i < usr1Cells.length; i++) {
     }
 }
 
+let usr2Cells = document.getElementById("u2grid").getElementsByTagName("td")
+for (let i = 0; i < usr2Cells.length; i++) {
+    if (usr2Cells[i].id.includes("u2")) {
+        usr2Cells[i].onclick = function(){cellClicked(usr2Cells[i].id)}
+    }
+}
 socket.on("recieve-tile", (tile) => {
     document.getElementById(tile).innerHTML = "X"
 })
