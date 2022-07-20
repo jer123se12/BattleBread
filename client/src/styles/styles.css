@@ -53,4 +53,24 @@ input[type=submit] {
 .child {
     display: inline-block;
     vertical-align: middle;
+    border: none;
+}
+
+.bgcolor {
+    background-color: #9D7753;
+}
+
+.cell {
+    background-color: #E8D4B0;
+    border-radius: 10px;
+}
+
+.celltext {
+    color: #E8D4B0;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.h3 {
+    color: #E8D4B0;
 }
