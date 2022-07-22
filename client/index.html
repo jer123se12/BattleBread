@@ -66,19 +66,19 @@
     </head>
 
     <body>
-        <div class="p-10 bgcolor" id="maincontainer">
-            <h1 class="font-bold text-4xl pb-6">BattleBread</h1>
+        <div class="p-10" style='background-color: #9D7753' id="maincontainer">
+            <h1 class="font-bold text-4xl pb-6 titletextcolor">BattleBread</h1>
 
             <div>
-                <div class="container roomSelBox rounded-lg shadow-lg">
+                <div class="container roomSelBox rounded-lg shadow-lg" style="background-color: #674023">
                     <div class="p-2 pl-5 pr-3">
                         <div class="flex flex-row justify-between">
-                            <h2 class="font-bold text-2xl">Room ID</h2>
+                            <h2 class="font-bold text-2xl" style="color: #faedcd">Room ID</h2>
                             <button class="hideRoomSel fa-solid fa-arrow-up" onclick="hideShowEditRoom()" id="hideRoomSel"></button>
                         </div>
-                        <h4 id="roomID"></h4>
+                        <h4 style="color: #faedcd"id="roomID"></h4>
                         <div id="inputRoomIDBox" class="inputRoomIDBox">
-                            <h3 class="font-bold">Or join an existing room</h3>
+                            <h3 class="" style="color: #faedcd;">Or join an existing room</h3>
                             <form>
                                 <input type="text" id="id-input">
                                 <input type="submit" value="Join" id="join-btn">
@@ -90,7 +90,7 @@
 
             <table class="child p-2 m-2 border-separate rounded-lg" id="u1grid">
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext"></td>
+                    <td class="w-12 h-14 pr-2 text-center celltext"></td>
                     <td class="w-14 h-14 text-center celltext">1</td>
                     <td class="w-14 h-14 text-center celltext">2</td>
                     <td class="w-14 h-14 text-center celltext">3</td>
@@ -103,7 +103,7 @@
                     <td class="w-14 h-14 text-center celltext">10</td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">A</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">A</td>
                     <td class="cell w-14 h-14 text-center cell" id="u1a1"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1a2"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1a3"></td>
@@ -116,7 +116,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u1a10"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">B</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">B</td>
                     <td class="cell w-14 h-14 text-center cell" id="u1b1"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1b2"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1b3"></td>
@@ -129,7 +129,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u1b10"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">C</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">C</td>
                     <td class="cell w-14 h-14 text-center cell" id="u1c1"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1c2"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1c3"></td>
@@ -142,7 +142,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u1c10"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">D</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">D</td>
                     <td class="cell w-14 h-14 text-center cell" id="u1d1"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1d2"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1d3"></td>
@@ -155,7 +155,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u1d10"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">E</td> 
+                    <td class="w-12 h-14 pr-2 text-center celltext">E</td> 
                     <td class="cell w-14 h-14 text-center cell" id="u1e1"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1e2"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1e3"></td>
@@ -168,7 +168,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u1e10"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">F</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">F</td>
                     <td class="cell w-14 h-14 text-center cell" id="u1f1"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1f2"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1f3"></td>
@@ -181,7 +181,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u1f10"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">G</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">G</td>
                     <td class="cell w-14 h-14 text-center cell" id="u1g1"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1g2"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1g3"></td>
@@ -194,7 +194,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u1g10"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">H</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">H</td>
                     <td class="cell w-14 h-14 text-center cell" id="u1h1"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1h2"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1h3"></td>
@@ -207,7 +207,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u1h10"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">I</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">I</td>
                     <td class="cell w-14 h-14 text-center cell" id="u1i"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1i"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1i"></td>
@@ -220,7 +220,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u1i"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">J</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">J</td>
                     <td class="cell w-14 h-14 text-center cell" id="u1j"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1j"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u1j"></td>
@@ -235,7 +235,7 @@
             </table>
             <table class="child p-2 m-2 table-fixed border-separate" id ="u2grid">
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext"></td>
+                    <td class="w-12 h-14 pr-2 text-center celltext"></td>
                     <td class="w-14 h-14 text-center celltext">1</td>
                     <td class="w-14 h-14 text-center celltext">2</td>
                     <td class="w-14 h-14 text-center celltext">3</td>
@@ -248,7 +248,7 @@
                     <td class="w-14 h-14 text-center celltext">10</td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">A</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">A</td>
                     <td class="cell w-14 h-14 text-center cell" id="u2a1"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2a2"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2a3"></td>
@@ -261,7 +261,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u2a10"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">B</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">B</td>
                     <td class="cell w-14 h-14 text-center cell" id="u2b1"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2b2"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2b3"></td>
@@ -274,7 +274,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u2b10"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">C</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">C</td>
                     <td class="cell w-14 h-14 text-center cell" id="u2c1"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2c2"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2c3"></td>
@@ -287,7 +287,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u2c10"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">D</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">D</td>
                     <td class="cell w-14 h-14 text-center cell" id="u2d1"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2d2"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2d3"></td>
@@ -300,7 +300,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u2d10"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">E</td> 
+                    <td class="w-12 h-14 pr-2 text-center celltext">E</td> 
                     <td class="cell w-14 h-14 text-center cell" id="u2e1"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2e2"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2e3"></td>
@@ -313,7 +313,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u2e10"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">F</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">F</td>
                     <td class="cell w-14 h-14 text-center cell" id="u2f1"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2f2"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2f3"></td>
@@ -326,7 +326,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u2f10"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">G</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">G</td>
                     <td class="cell w-14 h-14 text-center cell" id="u2g1"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2g2"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2g3"></td>
@@ -339,7 +339,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u2g10"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">H</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">H</td>
                     <td class="cell w-14 h-14 text-center cell" id="u2h1"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2h2"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2h3"></td>
@@ -352,7 +352,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u2h10"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">I</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">I</td>
                     <td class="cell w-14 h-14 text-center cell" id="u2i"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2i"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2i"></td>
@@ -365,7 +365,7 @@
                     <td class="cell w-14 h-14 text-center cell" id="u2i"></td>
                 </tr>
                 <tr>
-                    <td class="w-12 h-14 pr-2 text- celltext">J</td>
+                    <td class="w-12 h-14 pr-2 text-center celltext">J</td>
                     <td class="cell w-14 h-14 text-center cell" id="u2j"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2j"></td>
                     <td class="cell w-14 h-14 text-center cell" id="u2j"></td>
@@ -379,7 +379,7 @@
                 </tr>
             </table>
             <div class="pt-8" style="width: 30%">
-                <h3 class="celltext">Temp Chat thing haha</h3>
+                <h3 class="celltext">Temp Chat</h3>
                 <form>
                     <input type="text" id="text-input">
                     <input type="submit" value="Send" id="subText-btn">

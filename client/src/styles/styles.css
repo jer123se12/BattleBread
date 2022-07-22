@@ -56,21 +56,18 @@ input[type=submit] {
     border: none;
 }
 
-.bgcolor {
-    background-color: #9D7753;
-}
-
 .cell {
-    background-color: #E8D4B0;
+    background-color: #faedcd;
     border-radius: 10px;
 }
 
 .celltext {
-    color: #E8D4B0;
+    color: #faedcd;
     font-size: x-large;
     font-weight: bold;
 }
 
-.h3 {
-    color: #E8D4B0;
+.titletextcolor {
+    color: #e9edc9;
+    font-weight: bold;
 }
